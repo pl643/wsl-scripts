@@ -1,0 +1,4 @@
+# NOTE: this file should be in a location that is writeable by all wsl distro
+
+WSL_HOST="/mnt/c/repo/notes/wsl_hosts"
+alias wslipup="[ -z $WSL_DISTRO_NAME ] || echo $(ip a|grep 172|awk '{print $2}'|cut -f 1 -d /)  $USER \# $WSL_DISTRO_NAME $(hostname) >> $WSL_HOST"
